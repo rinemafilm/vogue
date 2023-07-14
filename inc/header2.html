@@ -1,0 +1,42 @@
+<div class="head">
+    <div class="headContainer">
+        <div class="headInner">
+            <div class="logo">
+                <a href="./main.html"><img src="../images/logo.svg" alt="보그코리아로고"></a></div>
+            <div class="nav">
+                <ul class="main_nav">
+                    <li><a href="./fashion.html">FASHION</a></li>
+                    <li><a href="./fashion.html">BEAUTY</a></li>
+                    <li><a href="./fashion.html">LIFESTYLE</a></li>
+                    <li><a href="./fashion.html">CULTURE</a></li>
+                    <li><a href="./fashion.html">VIDEO</a></li>
+                    <li><a href="./fashion.html">RUNWAY</a></li>
+                </ul>
+            </div>
+            <div class="side_nav">
+                <div class="subscribe"><a href="./main.html" target="_blank">구독하기</a></div>
+                <div class="nav_icon"><a href="./main.html"><img src="../images/nav_icon.png" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // 메뉴
+    var lastScrollTop = 0;
+ 
+    $(window).scroll(function(){
+ 
+        var _scrollTop = $(this).scrollTop(); //현재 스크롤값
+        var _navHeight = $(".headContainer").height(); //Nav 높이값 
+        
+        if(_scrollTop >= _navHeight) { 
+            if ((_scrollTop > lastScrollTop) && (lastScrollTop>0)) { 
+                $(".headContainer").addClass("off");
+            } else {
+                $(".headContainer").removeClass("off");
+            }
+                    lastScrollTop = _scrollTop;
+        }
+    });
+</script>
