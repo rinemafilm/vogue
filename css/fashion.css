@@ -227,6 +227,7 @@
     padding: 0;
     margin: 0;
     z-index: 998;
+    pointer-events : none;
   }
   
   .sideMenu.fixed {

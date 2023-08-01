@@ -317,7 +317,7 @@
                     <section class="fashion">
                         <div class="maintext">
                             <p>FASHION</p>
-                            <a href="./article.html" class="more">
+                            <a href="./fashion.html" class="more">
                                 <p>MORE</p><img src="../images/btn_more.svg" alt="">
                             </a>
                         </div>
@@ -396,6 +396,10 @@
         </article>
     </div>
 
+    <div id="topBtn">
+        <img src="../images/icon_top.png">
+    </div>
+    
     <div class="footer">
     </div>
 
@@ -454,6 +458,22 @@
         $('.best_pre').removeClass('active')
         $(this).addClass('active')
     })
+
+    // 스크롤탑
+    $(window).scroll(function () {
+    // console.log($(this).scrollTop());
+    if ($(this).scrollTop() > 10) {
+        $('#topBtn').show()
+    } else {
+        $('#topBtn').hide()
+    }
+    })
+
+    let scrollTopBtn = document.getElementById('topBtn');
+
+    scrollTopBtn.addEventListener('click',function(){
+        window.scrollTo({top: 0, behavior:'smooth'});
+    });
     </script>
 </body>
 </html>

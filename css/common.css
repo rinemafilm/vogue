@@ -100,6 +100,20 @@ li a:hover .section_text h4{
     color: rgba(255,255,255,0.5);
 }
 
+#topBtn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    display: none;
+    cursor: pointer;
+}
+
+#topBtn img{
+    width: 15px;
+}
+
 /* 모바일 */
 @media (max-width: 768px){
     /* 기사들 공통 폰트 */
@@ -166,6 +180,11 @@ li a:hover .section_text h4{
 .f_copy{
     font-size: 10px;
 }
+
+#topBtn img{
+    width: 0;
+}
+
 }
 
 @media (min-width: 768px){}

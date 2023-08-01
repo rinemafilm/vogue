@@ -226,6 +226,10 @@
         </div>
     </div>
 
+    <div id="topBtn">
+        <img src="../images/icon_top.png">
+    </div>
+
     <div class="footer"></div>
 
     <script>
@@ -245,6 +249,22 @@
             $('.sideMenu').removeClass('fixed')
         }
     })
+
+    // 스크롤탑
+    $(window).scroll(function () {
+        // console.log($(this).scrollTop());
+        if ($(this).scrollTop() > 10) {
+            $('#topBtn').show()
+        } else {
+            $('#topBtn').hide()
+        }
+    })
+
+    let scrollTopBtn = document.getElementById('topBtn');
+
+    scrollTopBtn.addEventListener('click',function(){
+        window.scrollTo({top: 0, behavior:'smooth'});
+    });
     
     </script>
 </body>
